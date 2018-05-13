@@ -1,3 +1,59 @@
+@font-face {
+	font-family: 'Proxima Nova Rg';
+	src: local('Proxima Nova Regular'),
+		   url('../fonts/ProximaNova-Regular.woff') format('woff');
+	  font-weight: normal;
+	  font-style: normal;
+}
+
+@font-face {
+	font-family: 'Proxima Nova Lt';
+	src: local('Proxima Nova Light'), 
+		   url('../fonts/ProximaNova-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Proxima Nova Rg';
+	src: local('Proxima Nova Bold'), 
+		   url('../fonts/ProximaNova-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	src: local('Open Sans Light'), 
+		   url('../fonts/OpenSans-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Nautilus';
+	src: local('Nautilus'), 
+		   url('../fonts/Nautilus.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: local('Montserrat Light'), 
+		   url('../fonts/Montserrat-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: local('Montserrat Bold'), 
+		   url('../fonts/Montserrat-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
 .visually-hidden {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -17,4 +73,9 @@
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
+  }
+
+  p {
+    font-size: 24px;
+    font-family: 'Nautilus';
   }
