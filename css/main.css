@@ -1,3 +1,7 @@
+:root {
+  --color-primary: #54d154;
+  --color-dark: ##1f1f1f; }
+
 @font-face {
   font-family: 'Proxima Nova Rg';
   src: local("Proxima Nova Regular"), url("../fonts/ProximaNova-Regular.woff") format("woff");
@@ -46,19 +50,150 @@
   width: 1px;
   height: 1px;
   margin: -1px; }
+  .visually-hidden .visually-hidden:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden; }
 
-.visually-hidden:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
+*,
+*::before,
+*::after {
+  margin: 0;
   padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden; }
+  box-sizing: inherit; }
 
-p {
-  font-size: 24px;
-  font-family: 'Nautilus'; }
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+.header-primary {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 5.5rem;
+  color: #fff; }
+
+.mb-md {
+  margin-bottom: 3.5rem; }
+
+.btn, .btn:link, .btn:visited {
+  text-decoration: none;
+  display: inline-block;
+  transition: all .2s;
+  border: none;
+  cursor: pointer; }
+
+.btn--lg {
+  background-color: var(--color-primary);
+  text-transform: uppercase;
+  color: #fff;
+  font-family: 'Proxima Nova Rg';
+  font-size: 2.2rem;
+  padding: .7rem 3.5rem;
+  border-radius: 10rem;
+  margin-bottom: 20rem; }
+
+.btn--grey {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #1f1e1d;
+  font-family: 'Proxima Nova Lt';
+  font-size: 1.6rem;
+  padding: .5rem 3rem .5rem 1rem;
+  position: relative;
+  border-radius: 3rem;
+  margin-bottom: 1rem; }
+  .btn--grey::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: url(../img/shape-1.png);
+    background-repeat: no-repeat;
+    width: 1.3rem;
+    height: 1.4rem;
+    right: 1rem;
+    top: 1rem; }
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(9, 1fr); }
+
+.header {
+  grid-column: 1 / -1;
+  min-height: 78rem;
+  padding: 1rem 3rem;
+  background-image: url(../img/background.jpg);
+  background-size: cover;
+  background-position: top; }
+  .header__nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25rem; }
+  .header__list {
+    list-style: none;
+    display: flex; }
+  .header__item:not(:last-child) {
+    margin-right: 2rem; }
+  .header__link:link, .header__link:visited {
+    display: inline-block;
+    font-family: 'Proxima Nova Rg';
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #fff;
+    line-height: 1;
+    text-decoration: none;
+    transition: all .2s;
+    position: relative; }
+    .header__link:link:hover, .header__link:visited:hover {
+      font-weight: 700; }
+    .header__link:link::before, .header__link:visited::before {
+      content: "";
+      display: block;
+      position: absolute;
+      height: .5rem;
+      left: 0;
+      top: -0.7rem;
+      background-color: var(--color-primary);
+      transform: scaleX(0);
+      transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s; }
+    .header__link:link:hover::before, .header__link:visited:hover::before {
+      width: 100%;
+      transform: scaleX(1); }
+  .header__logo {
+    flex: 0 0 18%;
+    font-family: 'Nautilus';
+    color: #fff;
+    font-size: 2.4rem; }
+  .header__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .search__input {
+    font-family: 'Proxima Nova Lt';
+    font-size: 1.6rem;
+    color: var(--color-dark);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: .7rem 1.3rem;
+    border-radius: 100px;
+    margin-right: -2.5rem; }
+  .search__button {
+    border: none; }
+    .search__button:focus {
+      outline: none; }
+  .search__icon {
+    height: 1.3rem;
+    width: 1.4rem;
+    fill: var(--color-dark); }

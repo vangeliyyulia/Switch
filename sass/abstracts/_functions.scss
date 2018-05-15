@@ -1,0 +1,15 @@
+@function font-weight($keyword) {
+	$conversion-map: (
+	  light: 300,
+	  normal: 400,
+	  bold: 700,
+	);
+
+	@if not map-has-key($conversion-map, $keyword) {
+		@error "Unsupported `font-weight` keyword `#{$keyword}`";
+        
+        @return null;
+	}
+    
+	@return map-get($conversion-map, $keyword);
+}

@@ -60,7 +60,6 @@
     width: 1px;
     height: 1px;
     margin: -1px;
-  }
   
   .visually-hidden:not(:focus):not(:active) {
     position: absolute;
@@ -74,8 +73,17 @@
     clip: rect(0 0 0 0);
     overflow: hidden;
   }
+}
 
-  p {
-    font-size: 24px;
-    font-family: 'Nautilus';
-  }
+*, 
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
