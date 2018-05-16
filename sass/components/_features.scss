@@ -1,0 +1,50 @@
+.features {
+
+    &__list {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        grid-column-gap: 3rem;
+    }
+
+    &__item {
+        display: grid;
+        grid-template-rows: repeat(4, max-content);
+        grid-row-gap: 2rem;
+        align-items: center;
+        justify-items: center;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 8.6rem;
+            height: 8.6rem;
+        }
+
+        &:nth-child(1)::before {
+            background: url(../img/Forma-1.png) no-repeat;
+        }
+
+        &:nth-child(2)::before {
+            background: url(../img/Forma-2.png) no-repeat;
+        }
+
+        &:nth-child(3)::before {
+            background: url(../img/Forma-3.png) no-repeat;
+        }
+    }
+
+    &__heading {
+        font-family: 'Proxima Nova Rg';
+        @include font-weight(bold);
+        font-size: 2.4rem;
+    }
+
+    &__description {
+        font-family: 'Proxima Nova Rg';
+        @include font-weight(light);
+        font-size: 1.5rem;
+        padding: 0 3rem;
+        text-align: center;
+    }
+}

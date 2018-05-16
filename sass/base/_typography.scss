@@ -1,6 +1,48 @@
-.header-primary {
+body {
+    font-family: 'Montserrat', serif;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--color-grey);
+}
+
+.heading-primary {
     font-family: 'Montserrat';
     @include font-weight(bold);
     font-size: 5.5rem;
     color: #fff;
+}
+
+.heading-secondary {
+    display: grid;
+    grid-template-rows: max-content max-content;
+    grid-row-gap: 1.5rem;
+    align-items: center;
+    justify-items: center;
+    padding: 1.5rem 10rem;
+
+    &--main {
+        display: grid;
+        grid-template-rows: max-content max-content;
+        align-items: center;
+        justify-items: center;
+        text-transform: uppercase;
+        font-family: 'Montserrat';
+        @include font-weight(light);
+        font-size: 2rem;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 4rem;
+            height: 2px;
+            background-color: currentColor;         
+        }
+    }
+
+    &--sub {
+        font-family: 'Montserrat';
+        @include font-weight(light);
+        font-size: 1.6rem;
+        display: block;        
+    }
 }

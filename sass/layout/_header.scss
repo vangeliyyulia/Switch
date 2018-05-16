@@ -57,18 +57,22 @@
         }
     }
 
-    &__logo {
-        flex: 0 0 18%;
-        font-family: 'Nautilus';
-        color: #fff;
-        font-size: 2.4rem;
-    }
-
     &__content {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+}
+
+.logo {
+    flex: 0 0 18%;
+
+    &__link {
+        text-decoration: none;
+        color: #fff;
+        font-family: 'Nautilus';
+        font-size: 2.4rem;
     }
 }
 
@@ -86,10 +90,17 @@
         padding: .7rem 1.3rem;
         border-radius: 100px;
         margin-right: -2.5rem;
+        transition: all .2s;
+
+        &:focus {
+            outline: none;
+            background-color: rgba(255, 255, 255, .9);
+        }
     }
 
     &__button {
         border: none;
+        background-color: transparent;
 
         &:focus {
             outline: none;

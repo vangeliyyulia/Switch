@@ -1,6 +1,7 @@
 :root {
   --color-primary: #54d154;
-  --color-dark: ##1f1f1f; }
+  --color-primary-hover: #48b148;
+  --color-dark: #1f1f1f; }
 
 @font-face {
   font-family: 'Proxima Nova Rg';
@@ -73,11 +74,45 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; }
 
-.header-primary {
+body {
+  font-family: 'Montserrat', serif;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--color-grey); }
+
+.heading-primary {
   font-family: 'Montserrat';
   font-weight: 700;
   font-size: 5.5rem;
   color: #fff; }
+
+.heading-secondary {
+  display: grid;
+  grid-template-rows: max-content max-content;
+  grid-row-gap: 1.5rem;
+  align-items: center;
+  justify-items: center;
+  padding: 1.5rem 10rem; }
+  .heading-secondary--main {
+    display: grid;
+    grid-template-rows: max-content max-content;
+    align-items: center;
+    justify-items: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-size: 2rem; }
+    .heading-secondary--main::after {
+      content: "";
+      display: block;
+      width: 4rem;
+      height: 2px;
+      background-color: currentColor; }
+  .heading-secondary--sub {
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-size: 1.6rem;
+    display: block; }
 
 .mb-md {
   margin-bottom: 3.5rem; }
@@ -97,7 +132,14 @@ html {
   font-size: 2.2rem;
   padding: .7rem 3.5rem;
   border-radius: 10rem;
-  margin-bottom: 20rem; }
+  margin-bottom: 30rem;
+  transition: transform .2s; }
+  .btn--lg:hover, .btn--lg:focus {
+    outline: none;
+    transform: translateY(-0.2rem);
+    background-color: var(--color-primary-hover); }
+  .btn--lg:active {
+    transform: translateY(0.2rem); }
 
 .btn--grey {
   background-color: rgba(255, 255, 255, 0.7);
@@ -108,6 +150,12 @@ html {
   position: relative;
   border-radius: 3rem;
   margin-bottom: 1rem; }
+  .btn--grey:hover, .btn--grey:focus {
+    outline: none;
+    transform: translateY(-0.2rem);
+    background-color: rgba(255, 255, 255, 0.8); }
+  .btn--grey:active {
+    transform: translateY(0.2rem); }
   .btn--grey::after {
     content: "";
     display: block;
@@ -118,6 +166,57 @@ html {
     height: 1.4rem;
     right: 1rem;
     top: 1rem; }
+
+.btn--sm {
+  background-color: var(--color-primary);
+  padding: .7rem 1.8rem;
+  border-radius: 3rem;
+  font-family: 'Proxima Nova Rg';
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #fff; }
+  .btn--sm:hover, .btn--sm:focus {
+    outline: none;
+    transform: translateY(-0.2rem);
+    background-color: var(--color-primary-hover); }
+  .btn--sm:active {
+    transform: translateY(0.2rem); }
+
+.features__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-column-gap: 3rem; }
+
+.features__item {
+  display: grid;
+  grid-template-rows: repeat(4, max-content);
+  grid-row-gap: 2rem;
+  align-items: center;
+  justify-items: center; }
+  .features__item::before {
+    content: "";
+    display: block;
+    width: 8.6rem;
+    height: 8.6rem; }
+  .features__item:nth-child(1)::before {
+    background: url(../img/Forma-1.png) no-repeat; }
+  .features__item:nth-child(2)::before {
+    background: url(../img/Forma-2.png) no-repeat; }
+  .features__item:nth-child(3)::before {
+    background: url(../img/Forma-3.png) no-repeat; }
+
+.features__heading {
+  font-family: 'Proxima Nova Rg';
+  font-weight: 700;
+  font-size: 2.4rem; }
+
+.features__description {
+  font-family: 'Proxima Nova Rg';
+  font-weight: 300;
+  font-size: 1.5rem;
+  padding: 0 3rem;
+  text-align: center; }
 
 .container {
   display: grid;
@@ -165,16 +264,19 @@ html {
     .header__link:link:hover::before, .header__link:visited:hover::before {
       width: 100%;
       transform: scaleX(1); }
-  .header__logo {
-    flex: 0 0 18%;
-    font-family: 'Nautilus';
-    color: #fff;
-    font-size: 2.4rem; }
   .header__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; }
+
+.logo {
+  flex: 0 0 18%; }
+  .logo__link {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Nautilus';
+    font-size: 2.4rem; }
 
 .search {
   display: flex;
@@ -188,12 +290,20 @@ html {
     border: none;
     padding: .7rem 1.3rem;
     border-radius: 100px;
-    margin-right: -2.5rem; }
+    margin-right: -2.5rem;
+    transition: all .2s; }
+    .search__input:focus {
+      outline: none;
+      background-color: rgba(255, 255, 255, 0.9); }
   .search__button {
-    border: none; }
+    border: none;
+    background-color: transparent; }
     .search__button:focus {
       outline: none; }
   .search__icon {
     height: 1.3rem;
     width: 1.4rem;
     fill: var(--color-dark); }
+
+.section-about {
+  grid-column: 2 / span 10; }
