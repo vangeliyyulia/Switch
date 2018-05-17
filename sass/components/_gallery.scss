@@ -1,0 +1,16 @@
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 3rem;
+
+    &__wrapper {
+        grid-column: 3 / span 8;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 3rem;
+    }
+
+    &__item {
+        width: 16rem;
+    }
+}

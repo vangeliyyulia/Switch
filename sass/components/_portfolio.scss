@@ -1,0 +1,41 @@
+.portfolio {
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__btn {
+        box-shadow: inset 1px 0 0 var(--color-dark-green);
+        border: none;
+        cursor: pointer;
+        padding: .7rem 1.5rem;
+        background-color: #fff;
+        color: var(--color-dark-green);
+        font-family: 'Proxima Nova Rg';
+        font-size: 1.6rem;
+        transition: all .2s;
+
+        &:hover,
+        &:focus,
+        &:active {
+            outline: none;
+            background-color: var(--color-dark-green);
+            color: #fff;
+        }
+
+        &--active {
+            background-color: var(--color-dark-green);
+            color: #fff;
+            border: none;
+        }
+
+        &--photo {
+            border-radius: 2rem 0 0 2rem;
+        }
+
+        &--print {
+            border-radius: 0 2rem 2rem 0;
+        } 
+    }
+}

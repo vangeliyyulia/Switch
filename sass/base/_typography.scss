@@ -10,6 +10,7 @@ body {
     @include font-weight(bold);
     font-size: 5.5rem;
     color: #fff;
+    animation: moveInLeft 1s ease-out;
 }
 
 .heading-secondary {
@@ -18,7 +19,7 @@ body {
     grid-row-gap: 1.5rem;
     align-items: center;
     justify-items: center;
-    padding: 1.5rem 10rem;
+    padding: 1rem 0;
 
     &--main {
         display: grid;
@@ -44,5 +45,9 @@ body {
         @include font-weight(light);
         font-size: 1.6rem;
         display: block;        
+    }
+
+    &--green {
+        color: #207b20;
     }
 }

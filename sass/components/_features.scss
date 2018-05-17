@@ -13,25 +13,17 @@
         grid-row-gap: 2rem;
         align-items: center;
         justify-items: center;
+    }
 
-        &::before {
-            content: "";
-            display: block;
-            width: 8.6rem;
-            height: 8.6rem;
-        }
+    &__image {
+        width: 14.4rem;
+        height: 14.4rem;
+        border-radius: 1rem;
+        background-color: #e1f3e1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        &:nth-child(1)::before {
-            background: url(../img/Forma-1.png) no-repeat;
-        }
-
-        &:nth-child(2)::before {
-            background: url(../img/Forma-2.png) no-repeat;
-        }
-
-        &:nth-child(3)::before {
-            background: url(../img/Forma-3.png) no-repeat;
-        }
     }
 
     &__heading {

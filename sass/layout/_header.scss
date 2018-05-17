@@ -35,8 +35,10 @@
         transition: all .2s;
         position: relative;
 
-        &:hover {
+        &:hover,
+        &:focus {
             @include font-weight(bold);
+            outline: none;
         }
 
         &::before {
@@ -51,10 +53,15 @@
                         background-color .1s;
         }
 
-        &:hover::before {
+        &:hover::before,
+        &:focus::before {
             width: 100%;
             transform: scaleX(1); 
         }
+    }
+
+    &__link--active {
+        @include font-weight(bold);
     }
 
     &__content {
