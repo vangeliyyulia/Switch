@@ -1,16 +1,11 @@
 .gallery {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: 3rem;
+    grid-template-columns: repeat(14, 1fr);
 
     &__wrapper {
-        grid-column: 3 / span 8;
+        grid-column: 3 / span 10;
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
         grid-gap: 3rem;
-    }
-
-    &__item {
-        width: 16rem;
     }
 }

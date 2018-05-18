@@ -1,11 +1,11 @@
 .clients-gallery {
     display: grid;
-    grid-template-columns: repeat(14, 1fr);
+    grid-template-columns: repeat(12, 1fr);
 
     &__wrapper {
-        grid-column: 4 / span 8;
+        grid-column: 3 / span 8;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
         grid-gap: 5rem;
     }
 

@@ -3,6 +3,7 @@
   --color-primary-hover: #48b148;
   --color-dark-green: #207b20;
   --color-grey: #828181;
+  --color-grey-light: #f2f1f1;
   --color-dark: #1f1f1f; }
 
 @keyframes moveInLeft {
@@ -325,29 +326,60 @@ body {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 3rem; }
+  grid-template-columns: repeat(14, 1fr); }
   .gallery__wrapper {
-    grid-column: 3 / span 8;
+    grid-column: 3 / span 10;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
     grid-gap: 3rem; }
-  .gallery__item {
-    width: 16rem; }
 
 .clients-gallery {
   display: grid;
-  grid-template-columns: repeat(14, 1fr); }
+  grid-template-columns: repeat(12, 1fr); }
   .clients-gallery__wrapper {
-    grid-column: 4 / span 8;
+    grid-column: 3 / span 8;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
     grid-gap: 5rem; }
   .clients-gallery__item {
     width: 16rem;
     display: flex;
     justify-content: center;
     align-items: center; }
+
+.team__wrapper {
+  display: grid;
+  grid-template-columns: repeat(14, 1fr); }
+
+.team__list {
+  grid-column: 4 / span 8;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+  grid-gap: 3rem; }
+
+.team__item {
+  display: grid;
+  grid-template-rows: repeat(3, min-content);
+  grid-row-gap: 2rem;
+  justify-items: center;
+  align-content: center; }
+
+.team__name {
+  font-family: 'Proxima Nova Rg';
+  font-weight: 400;
+  color: #fff;
+  font-size: 1.6rem; }
+
+.team__link:not(:last-child) {
+  margin-right: .5rem; }
+
+.team__icons {
+  background-color: var(--color-grey-light);
+  padding: .5rem;
+  border-radius: 2rem; }
+
+.team__icon {
+  margin-top: .3rem; }
 
 .container {
   display: grid;
@@ -372,6 +404,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center; }
+
+.team {
+  grid-column: 1 / -1;
+  background-color: var(--color-primary);
+  padding: 2rem 0 6rem 0; }
 
 .header {
   grid-column: 1 / -1;
