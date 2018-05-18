@@ -1,0 +1,18 @@
+.clients-gallery {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+
+    &__wrapper {
+        grid-column: 4 / span 8;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 5rem;
+    }
+
+    &__item {
+        width: 16rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

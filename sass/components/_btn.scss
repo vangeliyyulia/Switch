@@ -118,6 +118,38 @@
             top: 2rem;
         }
     }
+
+    &--clients {
+        background-color: #dddcdc;
+        padding: .7rem 4rem .7rem 3rem;
+        border-radius: 2.5rem;
+        font-family: 'Proxima Nova Rg';
+        @include font-weight(normal);
+        font-size: 1.8rem;
+        color: #a59d9d;
+        position: relative;
+
+        &:hover,
+        &:focus {
+            outline: none;
+            transform: translateY(-.2rem);
+            background-color: var(--color-grey);
+        }
+
+        &:active {
+            transform: translateY(.2rem);
+        }
+
+        &::after {
+            @include pseudo;
+            background-image: url(../img/shape-3.png);
+            background-repeat: no-repeat;
+            width: 1.3rem;
+            height: 1.4rem;
+            right: 1.8rem;
+            top: 1.7rem;
+        }
+    }
 }
 
 
