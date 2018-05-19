@@ -138,6 +138,9 @@ body {
   .heading-secondary--green {
     color: #207b20; }
 
+.mb-sm {
+  margin-bottom: 2rem; }
+
 .mb-md {
   margin-bottom: 3.5rem; }
 
@@ -444,6 +447,11 @@ body {
   background-color: var(--color-primary);
   padding: 2rem 0 6rem 0; }
 
+.footer {
+  grid-column: 1 / -1;
+  background-color: #333;
+  padding: 3rem; }
+
 .header {
   grid-column: 1 / -1;
   min-height: 78rem;
@@ -528,3 +536,8 @@ body {
     height: 1.3rem;
     width: 1.4rem;
     fill: var(--color-dark); }
+
+.footer__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-column-gap: 3rem; }
