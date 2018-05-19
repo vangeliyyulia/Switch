@@ -8,4 +8,52 @@
         grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
         grid-gap: 3rem;
     }
+
+    &__item {
+        position: relative;
+        transition: all .2s ease-out;
+    }
+
+    &__item:hover &__view {
+        opacity: 1;
+        animation: moveInBottom .2s;
+    }
+
+    &__item:hover &__img {
+        transform: scale(1.1);
+    }
+
+    &__img {
+        height: 100%;
+        transform: scale(1);
+        transition: transform .5s;
+    }
+
+    &__content {
+        width: 16rem;
+        height: 16rem;
+        overflow: hidden;
+    }
+
+    &__view {
+        width: 16rem;
+        height: 16rem;
+        background-color: rgba(0, 0, 0, .4);
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+    }
+
+    &__link {
+        color: #fff;
+        font-weight: 1rem;
+        font-family: 'Montserrat';
+        border: 1px solid #fff;
+        padding: .5rem 1rem;
+        text-decoration: none;
+    }
 }
