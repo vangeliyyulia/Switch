@@ -1,0 +1,46 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &__group:not(:last-child) {
+        margin-bottom: .2rem;
+    }
+
+    &__group:nth-child(1) {
+        border-radius: 3px 3px 0 0;
+    }
+
+    &__input {
+        font-size: 1.6rem;
+        font-family: 'Proxima Nova Rg';
+        color: #777;
+        padding: 1rem;
+        background-color: #444;
+        border: none;
+        transition: all .3s;
+        width: 100%;
+
+        &:focus {
+            outline: none;
+            color: #000;
+            background-color: var(--color-grey-light);
+        }
+    }
+
+    &__sent {
+        background-color: var(--color-primary);
+        border-radius: 0 0 3px 3px;
+        padding: 1rem 0;
+        border: none;
+        color: #fff;
+        font-family: 'Proxima Nova Rg';
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--color-primary-hover);
+        }
+    }
+}

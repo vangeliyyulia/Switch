@@ -11,6 +11,10 @@ body {
     font-size: 5.5rem;
     color: #fff;
     animation: moveInLeft 1s ease-out;
+
+    @include respond(tab-port) {
+        font-size: 4rem;
+    }
 }
 
 .heading-secondary {
@@ -19,7 +23,7 @@ body {
     grid-row-gap: 1.5rem;
     align-items: center;
     justify-items: center;
-    padding: 1rem 0;
+    padding: 1rem 3rem;
 
     &--main {
         display: grid;

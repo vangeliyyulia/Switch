@@ -1,0 +1,15 @@
+.icon {
+    background-color: var(--color-grey-light);
+    padding: .5rem;
+    border-radius: 2rem;
+
+    &__icon {
+        margin-top: .3rem;
+    }
+
+    &__link {
+        &:not(:last-child) {
+            margin-right: .5rem;
+        }
+    }
+}

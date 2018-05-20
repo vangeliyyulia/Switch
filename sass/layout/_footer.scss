@@ -5,3 +5,105 @@
         grid-column-gap: 3rem;
     }
 }
+
+.about-us {
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
+    align-items: center;
+    justify-items: center;
+    grid-row-gap: 3rem;
+
+    &__description {
+        font-family: 'Proxima Nova Rg';
+        font-size: 1.6rem;
+        color: var(--color-grey-light);
+        text-align: center;
+    }
+}
+
+.posts {
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+    grid-row-gap: 3rem;
+    align-items: center;
+    justify-items: center;
+
+    &__wrapper {
+        display: grid;
+        grid-template-rows: repeat(5, max-content);
+        grid-row-gap: 1rem;
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__img {
+        width: 5.3rem;
+        height: 5.3rem;
+        margin-right: 1rem;
+        border-radius: 3px;
+    }
+
+    &__heading-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        & > * {
+            text-decoration: none;
+        }
+    }
+
+    &__heading {
+        font-family: 'Montserrat';
+        @include font-weight(light);
+        font-size: 1.6rem;
+        color: var(--color-grey-light);
+
+        &--desc {
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            flex: 1;
+        }
+    }
+
+    &__link {
+        border-radius: 2px;
+        padding: .4rem;
+
+        &--green {
+            background-color: var(--color-primary);
+        }
+
+        &--orange {
+            background-color: #ffba00;
+        }
+
+        &--blue {
+            background-color: #089dea;
+        }
+
+        &--red {
+            background-color: #f34d04;
+        }
+    }
+}
+
+.contact {
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
+    align-items: center;
+    justify-items: center;
+    grid-row-gap: 3rem;
+
+    &__address {
+        width: 40%;
+        font-family: 'Proxima Nova Lt';
+        @include font-weight(light);
+        font-size: 1.4rem;
+        color: var(--color-grey-light);
+        text-align: center;
+    }
+}
